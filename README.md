@@ -39,7 +39,7 @@ Edit the `.env` file to set `ROS_IP` to you host machine ip address.
 Finally:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 The Mowgli GUI is hosted on port 4006 of your PI.
@@ -92,13 +92,13 @@ Edit the `.env` file to set your `MOWER_IP` to the ip of the mower AND the `ROS_
 Finally, launch:
 
 ```bash
-docker-compose -f docker-compose.ser2net.yaml up
+docker compose -f docker-compose.ser2net.yaml up
 ```
 
 or, if you want to have it in deamon mode
 
 ```bash
-docker-compose -f docker-compose.ser2net.yaml up -d
+docker compose -f docker-compose.ser2net.yaml up -d
 ```
 
 That's it !
@@ -130,7 +130,7 @@ Edit the `.env` file to set your `MOWER_IP` to the ip of the mower AND the `ROS_
 Finally:
 
 ```bash
-docker-compose -f docker-compose.remote.host.yaml up -d
+docker compose -f docker-compose.remote.host.yaml up -d
 ```
 
 #### Mower PI
@@ -156,7 +156,7 @@ The script suppose that your mowgli device is on `/dev/mowgli` and your gps on `
 Finally:
 
 ```bash
-docker-compose -f docker-compose.remote.pi.yaml up -d
+docker compose -f docker-compose.remote.pi.yaml up -d
 ```
 
 ## Usage
@@ -168,7 +168,7 @@ You can use the scripts in [./utils](./utils) directory to press home / start
 ### Logs
 
 ```bash
-docker-compose -f docker-compose.yaml logs -f openmower
+docker compose -f docker-compose.yaml logs -f openmower
 ```
 
 ### RViz
@@ -178,5 +178,5 @@ ROS Ports are exposed to the host machine so you can easily access RViz by setti
 ### Shutdown
 
 ```bash
-docker-compose -f docker-compose.yaml stop
+docker compose -f docker-compose.yaml stop
 ```
